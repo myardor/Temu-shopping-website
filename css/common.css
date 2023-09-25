@@ -1,0 +1,282 @@
+/* 所有页面都用到的css */
+
+/* 版心 */
+.wrapper {
+    margin: 0 auto;
+    width: 1240px;
+}
+
+/* 快捷导航 */
+.shortcut {
+    height: 52px;
+    background-color: #333;
+}
+
+.shortcut .wrapper {
+    display: flex;
+    justify-content: flex-end;
+    /* vertical-align: middle; 是控制自身的非容器内元素*/
+    align-items: center;
+    height: 52px;
+    /* background-color: #333; */
+}
+
+.shortcut ul {
+    display: flex;
+    /* line-height: 52px; */
+}
+
+.shortcut li a {
+    padding: 0 15px;
+    border-right: 1px solid #999;
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    color: #FFFFFF;
+}
+
+.shortcut li .iconfont {
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.shortcut li:last-child a {
+    border-right: 0;
+}
+
+.shortcut li .login {
+    color:#5EB69C;
+}
+
+/* 头部 */
+.header {
+    display: flex;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    /* align-items: center; */
+    height: 88px;
+    /* background-color: aqua; */
+}
+
+
+/* 头部-logo */
+.header .logo a{
+    display: block;
+    margin-right: 40px;
+    width: 200px;
+    height: 88px;
+    font-size: 0;
+    background-image: url(../images/logo.png);
+    background-size: cover;
+}
+
+
+
+
+/* 头部-导航nav */
+.nav {
+    margin-top: 33px;
+    margin-right: 28px;
+}
+
+.nav ul{
+    display: flex;
+}
+
+.nav li {
+    margin-right: 47px;
+}
+
+.nav li a {
+    padding-bottom: 10px;
+}
+
+.nav li a:hover {
+    color: #5EB69C;
+    border-bottom: 2px solid #5EB69C;
+}
+
+
+
+/* 头部-搜索serach */
+.search {
+    display: flex;
+    margin-top: 33px;
+    margin-right: 45px;
+    width: 170px;
+    height: 34px;
+    border-bottom: 2px solid #F4F4F4;
+}
+
+.search .iconfont {
+    margin-right: 8px;
+    font-size: 18px;
+    color: #CCCCCC;
+}
+
+.search input {
+    /* 浏览器优先生效input的默认宽度 因此flex:1不生效*/
+    /* 强制修改input的宽度即可改变默认 → width:0; */
+    flex: 1;
+    width: 0;
+}
+
+.search input::placeholder {
+    font-size: 16px;
+    color:#CCC;
+}
+
+
+
+/* 头部-购物车cart */
+.cart {
+    position: relative;
+    margin-top: 32px;
+}
+
+.cart .iconfont {
+    font-size: 24px;
+}
+
+.cart i {
+    position: absolute;
+    top: 1px;
+    /* right：右对齐 如果内容过多，会向左撑开 可能盖住其他内容 */
+    /* right: 1px; */
+    left: 15px;
+    padding: 0 6px;
+    background-color: #E26237;
+    height: 15px;
+    font-size: 14px;
+    line-height: 15px;
+    color: #FFFEFE;
+    border-radius: 8px;
+}
+
+
+
+/* 尾部 */
+.footer {
+    height: 580px;
+    background-color: #F5F5F5;
+}
+
+/* 尾部-服务service */
+.service {
+    height: 178px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.service ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.service ul li {
+    display: flex;
+    width: 190px;
+    height: 58px;
+}
+
+.service li h5 {
+    margin-right: 20px;
+    width: 58px;
+    height: 58px;
+    background: url(../images/sprite.png) 0 0;
+    
+}
+
+.service li:nth-child(2) h5 {
+    background-position: 0 -58px;
+}
+
+.service li:nth-child(3) h5 {
+    background-position: 0 -116px;
+}
+
+.service li:nth-child(4) h5 {
+    background-position: 0 -174px;
+}
+
+.service li p {
+    line-height: 58px;
+    font-size: 28px;
+}
+
+/* 尾部-帮助中心help */
+.help {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    height: 302px;
+}
+
+/* 尾部-帮助中心help-left */
+.help .left {
+    display: flex;
+}
+
+.help .left dl {
+    margin-right: 84px;
+}
+
+.help .left dt {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.help .left dd {
+    margin-bottom: 10px;
+}
+
+.help .left dd a {
+    font-size: 16px;
+    color: #969696;
+}
+
+.help .left .iconfont {
+    color:#5EB69C;
+}
+
+/* 尾部-帮助中心help-right */
+.help .right {
+    width: 295px;
+}
+
+.help .right ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.help .right ul li {
+    /* margin-right: 55px; */
+    width: 120px;
+    /* height: 153px; */
+}
+
+.help .right li img {
+    margin-bottom: 10px;
+    width: 120px;
+    height: 120px;
+}
+
+.help .right li p {
+    text-align: center;
+    color: #969696;
+}
+
+/* 尾部-版权copyright */
+.copyright {
+    text-align: center;
+}
+
+.copyright p{
+    color: #A1A1A1;
+    margin-bottom: 10px;
+}
+
+.copyright p a{
+    margin: 0 10px;
+    color: #A1A1A1;
+}
